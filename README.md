@@ -1,14 +1,59 @@
 # Doc Chat: PDF Chatbot
 
-## Overview
+Doc Chat is a web application that allows users to upload multiple PDF documents and interact with them through a chatbot interface. The backend is powered by **FastAPI**, integrated with **LangChain**, **Google Gemini**, and **FAISS** for document processing, vector storage, and conversational AI. The frontend is built with **React** and communicates with the backend using fetch requests for PDF uploads and chat interactions.
 
-Doc Chat is a web application that allows users to upload multiple PDF documents and interact with them through a chatbot interface. The backend uses FastAPI with integration to LangChain, Google Gemini, and FAISS for document processing, vector storage, and conversational AI. The frontend is built with React and communicates with the FastAPI backend using fetch to handle PDF uploads and chat requests.
+---
 
-## Backend (FastAPI)
+## Table of Contents
 
-### Setup
+- [Backend Setup](#backend-setup)
+  - [Requirements](#backend-requirements)
+  - [Setup](#backend-setup-steps)
+  - [API Endpoints](#backend-api-endpoints)
+  
+- [Frontend Setup](#frontend-setup)
+  - [Requirements](#frontend-requirements)
+  - [Setup](#frontend-setup-steps)
+  - [Communication with Backend](#frontend-communication-with-backend)
 
-1. Clone this repository to your local machine:
+---
+
+## Backend Setup
+
+### Requirements
+
+- Python 3.8 or higher
+- Required Python Libraries:
+  - `fastapi`
+  - `uvicorn`
+  - `PyPDF2`
+  - `langchain`
+  - `google-generativeai`
+  - `faiss-cpu`
+  - `pydantic`
+  - `python-dotenv`
+
+### Setup Steps
+
+1. **Clone the repository:**
+
    ```bash
    git clone <repository-url>
    cd doc-chat-backend
+   ```
+2.**Create a .env file in the root directory and add your Google API key:**
+
+```bash
+GOOGLE_API_KEY=your-google-api-key
+```
+3.**Install the required Python dependencies:**
+
+```bash
+pip install -r requirements.txt
+```
+4.**Run the FastAPI backend server:**
+
+```bash
+uvicorn main:app --reload
+```
+The backend will be running at http://localhost:8000.
