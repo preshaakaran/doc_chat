@@ -2,21 +2,6 @@
 
 Doc Chat is a web application that allows users to upload multiple PDF documents and interact with them through a chatbot interface. The backend is powered by **FastAPI**, integrated with **LangChain**, **Google Gemini**, and **FAISS** for document processing, vector storage, and conversational AI. The frontend is built with **React** and communicates with the backend using fetch requests for PDF uploads and chat interactions.
 
----
-
-## Table of Contents
-
-- [Backend Setup](#backend-setup)
-  - [Requirements](#backend-requirements)
-  - [Setup](#backend-setup-steps)
-  - [API Endpoints](#backend-api-endpoints)
-  
-- [Frontend Setup](#frontend-setup)
-  - [Requirements](#frontend-requirements)
-  - [Setup](#frontend-setup-steps)
-  - [Communication with Backend](#frontend-communication-with-backend)
-
----
 
 ## Backend Setup
 
